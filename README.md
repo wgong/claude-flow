@@ -42,8 +42,13 @@
 ⚠️ **IMPORTANT**: Claude Code must be installed first:
 
 ```bash
+
+cd ~/projects/wgong/claude-flow
+
 # 1. Install Claude Code globally
 npm install -g @anthropic-ai/claude-code
+
+npm view|show @anthropic-ai/claude-code
 
 # 2. (Optional) Skip permissions check for faster setup
 # Only use if you understand the security implications
@@ -58,8 +63,24 @@ npm install -g @anthropic-ai/claude-code
 # 1. Initialize Claude Flow with enhanced MCP setup (auto-configures permissions!)
 npx claude-flow@alpha init --force
 
+# will install claude-flow@2.0.0-alpha.84
+
+### see log at `learn/npx-init.log.md`
+
 # 2. Explore all revolutionary capabilities  
 npx claude-flow@alpha --help
+
+### see log at `learn/claude-flow-help.md`
+
+# 3 configure Claude Code
+
+# Install Claude Code
+npm install -g @anthropic-ai/claude-code
+
+# Configure with your API key
+claude-code auth login
+# This will prompt you to enter your API key from console.anthropic.com
+
 
 # 3a. Quick AI coordination (recommended for most tasks)
 npx claude-flow@alpha swarm "build me a REST API"
